@@ -23,9 +23,11 @@ class NinjaInstallerConan(ConanFile):
         tools.unzip("ninja.zip")
         
     def package(self):
-        self.copy("ninja", dst="bin/")
         if str(self.settings.os) in ["Linux", "Macos"]:
+            self.copy("ninja", dst="bin/")
             self.run("chmod +x %s" % os.path.join(self.package_folder, "bin", "ninja"))
+        else:
+            self.copy("ninja.exe", dst="bin/")
     
     def package_info(self):
         self.env_info.path.append(os.path.join(self.package_folder, "bin"))
