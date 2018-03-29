@@ -8,8 +8,8 @@ class NinjaInstallerConan(ConanFile):
     license = "MIT"
     url = "http://github.com/lasote/conan-ninja-installer"
     settings = {"os": ["Windows", "Linux", "Macos"], "arch": ["x86", "x86_64"]}
-    options = {"version": ["1.7.1", "1.6.0", "1.5.3", "1.5.1", "1.4.0"]} # https://github.com/ninja-build/ninja/releases
-    default_options = "version=1.7.1"
+    options = {"version": ["1.8.2", "1.7.1", "1.6.0", "1.5.3", "1.5.1", "1.4.0"]} # https://github.com/ninja-build/ninja/releases
+    default_options = "version=1.8.2"
     build_policy = "missing"
     
     
